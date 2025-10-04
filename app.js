@@ -1,14 +1,23 @@
+// App.js
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import navegacaoapp from './src/navegacao/navegacaoapp';
-import autenticacao from './src/navegacao/autenticacao';
+
+// Componentes principais
+import NavegacaoApp from './src/navegacao/navegacaoapp';
+import Autenticacao from './src/navegacao/autenticacao';
 
 export default function App() {
-  const isLoggedIn = true; 
+  // Estado de login
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <NavigationContainer>
-      {isLoggedIn ? <navegacaoapp /> : <autenticacao />}
+      {isLoggedIn ? (
+        <NavegacaoApp />
+      ) : (
+        <Autenticacao setIsLoggedIn={setIsLoggedIn} />
+      )}
     </NavigationContainer>
   );
 }

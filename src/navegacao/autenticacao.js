@@ -6,12 +6,14 @@ import colors from '../tema/cores';
 
 const Stack = createNativeStackNavigator();
 
-export default function autenticacao() {
+export default function Autenticacao() {
   return (
-    <Stack.Navigator screenOptions={{
-      headerStyle: { backgroundColor: colors.card },
-      headerTintColor: colors.text,
-    }}>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: { backgroundColor: colors.card },
+        headerTintColor: colors.text,
+      }}
+    >
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Registro" component={Registro} />
     </Stack.Navigator>
