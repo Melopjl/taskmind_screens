@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import colors from '../tema/cores';
 
-export default function Login({ navigation }) {
+export default function Login({ navigation, setIsLoggedIn }) { 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+  
+    setIsLoggedIn(true); 
+  };
 
   return (
     <View style={styles.container}>
@@ -22,7 +27,7 @@ export default function Login({ navigation }) {
         value={password}
         onChangeText={setPassword}
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Registro')}>

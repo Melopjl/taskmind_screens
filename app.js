@@ -2,9 +2,8 @@ import 'react-native-gesture-handler';
 import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-
-import NavegacaoApp from './src/navegacao/navegacaoapp';
 import Autenticacao from './src/navegacao/autenticacao';
+import NavegacaoApp from './src/navegacao/navegacaoapp';
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -14,11 +13,8 @@ export default function App() {
       {isLoggedIn ? (
         <NavegacaoApp />
       ) : (
-        <Autenticacao setIsLoggedIn={setIsLoggedIn} />
+        <Autenticacao setIsLoggedIn={setIsLoggedIn} /> 
       )}
     </NavigationContainer>
   );
 }
-
-
-// substituir para a tela desejada que querer caso queira ver ela
