@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Image, Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import colors from '../../theme/colors';
+import colors from '../tema/cores';
 
 export default function EditarPerfil({ navigation }) {
   const [image, setImage] = useState(null);

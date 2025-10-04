@@ -1,18 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import colors from '../../theme/colors';
+import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
+import colors from '../tema/cores';
 
 export default function Home() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Bem-vindo ao TaskMind!</Text>
       <Text style={styles.subtitle}>Organize suas tarefas e compromissos facilmente.</Text>
-      
-      {/* OBSERVAÇÃO BACKEND:
-          aqui você pode buscar os dados de tarefas do usuário via API e exibir dinamicamente
-          
-      */}
-    </View>
+    </SafeAreaView>
   );
 }
 

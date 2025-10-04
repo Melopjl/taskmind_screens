@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import colors from '../../theme/colors';
+import colors from '../tema/cores';
 
 // ""mock" de tarefas o backend deve retornar algo similar:
 
