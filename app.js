@@ -19,3 +19,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+
+// substituir para a tela desejada que querer caso queira ver ela
